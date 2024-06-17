@@ -29,6 +29,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }
 });
 
+document.getElementById('phone').addEventListener('input', function(event) {
+    let value = event.target.value;
+    event.target.value = value.replace(/[^\d]/g, '');
+});
+
 function validateForm() {
     let isValid = true;
 
